@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@import "katex/dist/katex.min.css";
+
+@theme {
+  --color-brand-indigo: #4f46e5;
+  --color-brand-slate: #f8fafc;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 font-sans antialiased;
+}
+
+.prose h1, .prose h2, .prose h3 {
+  @apply font-bold text-slate-950 mb-3 mt-5 tracking-tight border-b border-slate-100 pb-1;
+}
+
+.prose strong {
+  @apply text-indigo-700 font-bold;
+}
+
+.prose-indigo .katex {
+  @apply text-indigo-900;
+}
+
+.prose p {
+  @apply mb-3 last:mb-0 leading-relaxed;
+}
+
+.prose ul, .prose ol {
+  @apply ml-5 mb-3;
+}
+
+.prose li {
+  @apply mb-1.5;
+}
+
+.katex-display {
+  @apply my-6 overflow-x-auto overflow-y-hidden py-1;
+}
+
+.katex {
+  font-size: 1.15em;
+}
+
+/* Custom Scrollbar for Chat */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-slate-200 rounded-full hover:bg-slate-300;
+}
